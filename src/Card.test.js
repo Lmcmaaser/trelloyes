@@ -22,7 +22,11 @@ describe('Cards component', () => {
     //Compare the rendered component to a saved version of the component
     it('renders the UI as expected', () => {
         const tree = renderer
-          .create(<button type='button'> delete</button>) 
+          .create(<Card
+            key={'a'}
+            title={'First card'}
+            content={'lorem ipsum'}
+          />) 
           .toJSON();
         expect(tree).toMatchSnapshot();  
     });
